@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
+    color: #f1f1f1 ;
   }
 
 .contenedor-calculadora{
@@ -21,7 +22,7 @@ body {
     outline: none;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-
+    width: 100%;
 }
 
 .salida {
@@ -62,4 +63,21 @@ body {
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+    .contenedor-calculadora {
+        grid-template-columns: repeat(4, 50px);
+        grid-template-rows: minmax(60px, auto) repeat(5, 50px);
+    }
+
+    .salida .display {
+        font-size: 1rem;   
+    }
+
+    .contenedor-calculadora>button {
+        font-size: 1rem;
+    }
+    
 }
